@@ -1,7 +1,7 @@
 {% set name = "spyder-terminal" %}
-{% set version = "0.2.0" %}
+{% set version = "0.2.1" %}
 {% set hash_type = "sha256" %}
-{% set hash = "cabf30b257749a8ce651819efc894583812205e3ff77c0f41e56cf77075d4196" %}
+{% set hash = "e1f21a1a2ff5e87d7e42d3617dc45a2a1e52a2446dc271bedf07b476b43df19c" %}
 
 package:
   name: {{ name|lower }}
