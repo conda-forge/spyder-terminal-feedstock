@@ -14,7 +14,6 @@ source:
 
 build:
   number: 0
-  skip: True  # [win and py27]
   script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
@@ -24,8 +23,8 @@ requirements:
 
   run:
     - coloredlogs
-    - pexpect
     - python
+    - pexpect  # [not win]
     - pywinpty  # [win]
     - requests
     - spyder >=3.2
