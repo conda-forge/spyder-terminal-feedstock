@@ -17,14 +17,16 @@ Windows console applications such as powershell.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/spyder-terminal-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/spyder-terminal-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/spyder-terminal-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/spyder-terminal-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/spyder-terminal-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/spyder-terminal-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/spyder-terminal-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/spyder-terminal-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/spyder-terminal-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/spyder-terminal-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/spyder-terminal-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/spyder-terminal-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/spyder-terminal/badges/version.svg)](https://anaconda.org/conda-forge/spyder-terminal)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/spyder-terminal/badges/downloads.svg)](https://anaconda.org/conda-forge/spyder-terminal)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-spyder--terminal-green.svg)](https://anaconda.org/conda-forge/spyder-terminal) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/spyder-terminal.svg)](https://anaconda.org/conda-forge/spyder-terminal) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/spyder-terminal.svg)](https://anaconda.org/conda-forge/spyder-terminal) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/spyder-terminal.svg)](https://anaconda.org/conda-forge/spyder-terminal) |
 
 Installing spyder-terminal
 ==========================
@@ -69,6 +71,7 @@ To manage the continuous integration and simplify feedstock maintenance
 Using the ``conda-forge.yml`` within this repository, it is possible to re-render all of
 this feedstock's supporting files (e.g. the CI configuration files) with ``conda smithy rerender``.
 
+For more information please check the [conda-forge documentation](https://conda-forge.org/docs/).
 
 Terminology
 ===========
