@@ -14,11 +14,10 @@ source:
 
 build:
   number: 0
-  skip: True  # [win and py27]
-  script: python setup.py install --single-version-externally-managed --record=record.txt
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv "
 
 requirements:
-  build:
+  host:
     - python
     - setuptools
 
