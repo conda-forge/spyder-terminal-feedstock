@@ -1,7 +1,7 @@
 {% set name = "spyder-terminal" %}
-{% set version = "0.2.3" %}
+{% set version = "0.2.4" %}
 {% set hash_type = "sha256" %}
-{% set hash = "fa3659ec9636ca3bcc4d3a8dc1b9101de3042a00c8979488dfe8ad201f349647" %}
+{% set hash = "e83147c8a25123ed99baa0da17ed58318a442aad18d1bdf6815c7ee899910c10" %}
 
 package:
   name: {{ name|lower }}
@@ -14,17 +14,17 @@ source:
 
 build:
   number: 0
-  skip: True  # [win and py27]
-  script: python setup.py install --single-version-externally-managed --record=record.txt
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv "
 
 requirements:
-  build:
+  host:
     - python
+    - pip
     - setuptools
 
   run:
     - coloredlogs
-    - pexpect
+    - pexpect  # [not win]
     - python
     - pywinpty  # [win]
     - requests
@@ -33,7 +33,7 @@ requirements:
 
 test:
   imports:
-    - spyder_terminal
+    - spyder_terminal  # [not osx]
 
 about:
   home: https://github.com/spyder-ide/spyder-terminal
