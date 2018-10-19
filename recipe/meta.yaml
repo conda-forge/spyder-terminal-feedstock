@@ -33,7 +33,7 @@ requirements:
 
 test:
   imports:
-    - spyder_terminal
+    - spyder_terminal  # [not osx]
 
 about:
   home: https://github.com/spyder-ide/spyder-terminal
