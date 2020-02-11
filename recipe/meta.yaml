@@ -28,7 +28,7 @@ requirements:
     - python
     - pywinpty  # [win]
     - requests
-    - spyder >=3.2
+    - spyder >=4.0
     - tornado
 
 test:
