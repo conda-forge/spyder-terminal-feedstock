@@ -33,6 +33,7 @@ requirements:
     - qtpy
     - xorg-libxcursor
     - xorg-libxi
+    - xorg-libxtst
     - tornado
 
 test:
