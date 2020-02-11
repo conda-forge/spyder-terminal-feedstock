@@ -29,6 +29,8 @@ requirements:
     - pywinpty  # [win]
     - requests
     - spyder >=4.0
+    - pyqt >=5.6,<5.13
+    - qtpy
     - tornado
 
 test:
