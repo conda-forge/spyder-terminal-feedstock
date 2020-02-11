@@ -23,6 +23,7 @@ requirements:
     - setuptools
 
   run:
+    - python
     - spyder >=4.0.0,<5.0.0
     - tornado
     - terminado
