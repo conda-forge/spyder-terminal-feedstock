@@ -14,7 +14,7 @@ source:
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv "
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   host:
@@ -23,22 +23,15 @@ requirements:
     - setuptools
 
   run:
-    - coloredlogs
-    - pexpect  # [not win]
-    - python
-    - pywinpty  # [win]
-    - requests
-    - spyder >=4.0
-    - pyqt >=5.6,<5.13
-    - qtpy
-    - xorg-libxcursor
-    - xorg-libxi
-    - xorg-libxtst
+    - spyder >=4.0.0,<5.0.0
     - tornado
+    - terminado
+    - coloredlogs
+    - requests
 
 test:
   imports:
-    - spyder_terminal  # [not osx]
+    - spyder_terminal  # [not linux]
 
 about:
   home: https://github.com/spyder-ide/spyder-terminal
