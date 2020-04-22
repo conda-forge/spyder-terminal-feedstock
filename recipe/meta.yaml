@@ -1,6 +1,6 @@
 {% set name = "spyder-terminal" %}
-{% set version = "0.3.0" %}
-{% set hash = "0191fa98940d8505683b68534bde119c6ff676c21f8d5f921d15f422a8247301" %}
+{% set version = "0.3.1" %}
+{% set hash = "d08b110ba83130ada87675873e2d8e0f3d91e61c34c25b9340174e121c2fe879" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
