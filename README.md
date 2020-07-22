@@ -5,7 +5,7 @@ Home: https://github.com/spyder-ide/spyder-terminal
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Spyder plugin for displaying system terminals.
 
