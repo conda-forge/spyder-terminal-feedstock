@@ -5,9 +5,11 @@ Home: https://github.com/spyder-ide/spyder-terminal
 
 Package license: MIT
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/spyder-terminal-feedstock/blob/master/LICENSE.txt)
 
 Summary: Spyder plugin for displaying system terminals.
+
+Development: https://github.com/spyder-ide/spyder-terminal
 
 This plugin allows you to execute flawlessly any bash command
 inside Spyder, even ncurses applications like nano or vi, or
