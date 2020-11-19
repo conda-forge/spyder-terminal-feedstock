@@ -12,7 +12,7 @@ source:
   sha256: {{ hash }}
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
@@ -49,3 +49,4 @@ extra:
   recipe-maintainers:
     - andfoy
     - ccordoba12
+    - steff456
