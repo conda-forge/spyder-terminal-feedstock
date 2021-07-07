@@ -23,7 +23,7 @@ requirements:
 
   run:
     - python
-    - spyder >=4.0.0,<5.0.0
+    - spyder >=5.0.5
     - tornado
     - terminado
     - coloredlogs
