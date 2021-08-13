@@ -31,6 +31,8 @@ requirements:
     - requests
 
 test:
+  commands:
+    - python -m pip check  # [linux or (win and py>=37)]
   imports:
     - spyder_terminal  # [not linux]
 
