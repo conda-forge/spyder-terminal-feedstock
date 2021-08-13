@@ -12,7 +12,7 @@ source:
   sha256: {{ hash }}
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py36 and aarch64]
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
@@ -24,13 +24,17 @@ requirements:
 
   run:
     - python
-    - spyder >=5.0.5
+    - spyder >=5.1.1
     - tornado
     - terminado
     - coloredlogs
     - requests
 
 test:
+  requires:
+    - pip
+  commands:
+    - python -m pip check  # [linux or (win and py>=37)]
   imports:
     - spyder_terminal  # [not linux]
 
