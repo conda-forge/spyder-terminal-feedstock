@@ -24,7 +24,7 @@ requirements:
 
   run:
     - python
-    - spyder >=5.1.1
+    - spyder >=5.2.0
     - tornado
     - terminado
     - coloredlogs
@@ -34,7 +34,7 @@ test:
   requires:
     - pip
   commands:
-    - python -m pip check  # [linux or (win and py>=37)]
+    - python -m pip check  # [(linux and py>37) or (win and py>37)]
   imports:
     - spyder_terminal  # [not linux]
 
