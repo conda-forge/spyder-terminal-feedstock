@@ -1,6 +1,6 @@
 {% set name = "spyder-terminal" %}
-{% set version = "1.1.0" %}
-{% set hash = "6043e1f72abcedd65bbcc5eeaf803065cac56cce2bbd302cc51e932973777c36" %}
+{% set version = "1.2.0" %}
+{% set hash = "de5c752a648ba2d29e889a1e2181b221e7913250d71ac6498b3bc0d258a969a8" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ hash }}
 
 build:
-  number: 1
+  number: 0
   skip: true  # [py36 and aarch64]
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
@@ -24,7 +24,7 @@ requirements:
 
   run:
     - python
-    - spyder >=5.1.1
+    - spyder >=5.2.0
     - tornado
     - terminado
     - coloredlogs
@@ -34,7 +34,7 @@ test:
   requires:
     - pip
   commands:
-    - python -m pip check  # [linux or (win and py>=37)]
+    - python -m pip check  # [(linux and py>37) or (win and py>37)]
   imports:
     - spyder_terminal  # [not linux]
 
