@@ -12,8 +12,7 @@ source:
   sha256: {{ hash }}
 
 build:
-  number: 0
-  skip: true  # [py36 and aarch64]
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
@@ -34,7 +33,7 @@ test:
   requires:
     - pip
   commands:
-    - python -m pip check  # [(linux and py>37) or (win and py>37)]
+    - python -m pip check  # [linux or win]
   imports:
     - spyder_terminal  # [not linux]
 
