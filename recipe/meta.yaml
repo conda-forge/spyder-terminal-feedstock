@@ -34,7 +34,7 @@ test:
   requires:
     - pip
   commands:
-    - python -m pip check  # [(linux and py>37) or (win and py>37)]
+    - python -m pip check
   imports:
     - spyder_terminal  # [not linux]
 
