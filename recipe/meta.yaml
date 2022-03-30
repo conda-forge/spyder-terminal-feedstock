@@ -30,10 +30,6 @@ requirements:
     - requests
 
 test:
-  requires:
-    - pip
-  commands:
-    - python -m pip check  # [linux or win]
   imports:
     - spyder_terminal  # [not linux]
 
