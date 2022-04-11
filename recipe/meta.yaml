@@ -28,8 +28,15 @@ requirements:
     - terminado
     - coloredlogs
     - requests
+    # This is here to workaround an inconsistency with flake8
+    # See: https://github.com/conda-forge/flake8-feedstock/issues/52
+    - importlib-metadata <4.3  # [py < 38]
 
 test:
+  requires:
+    - pip
+  commands:
+    - python -m pip check  # [linux or win]
   imports:
     - spyder_terminal  # [not linux]
 
