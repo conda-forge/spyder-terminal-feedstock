@@ -35,8 +35,10 @@ test:
     - pip
   commands:
     - pip check
-  imports:
-    - spyder_terminal
+  # Importing spyder_terminal requires many CDTs to be installed on linux
+  # This would needlessly increase build time
+  # imports:
+  #   - spyder_terminal
 
 about:
   home: https://github.com/spyder-ide/spyder-terminal
