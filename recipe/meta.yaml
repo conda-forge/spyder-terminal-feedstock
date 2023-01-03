@@ -12,33 +12,33 @@ source:
   sha256: {{ hash }}
 
 build:
-  number: 0
+  number: 1
+  noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
-    - python
+    - python >=3.8
     - pip
     - setuptools
 
   run:
-    - python
+    - python >=3.8
     - spyder >=5.2.0
     - tornado
     - terminado
     - coloredlogs
     - requests
-    # This is here to workaround an inconsistency with flake8
-    # See: https://github.com/conda-forge/flake8-feedstock/issues/52
-    - importlib-metadata <4.3  # [py < 38]
 
 test:
   requires:
     - pip
   commands:
-    - python -m pip check  # [linux or win]
-  imports:
-    - spyder_terminal  # [not linux]
+    - pip check
+  # Importing spyder_terminal requires many CDTs to be installed on linux
+  # This would needlessly increase build time
+  # imports:
+  #   - spyder_terminal
 
 about:
   home: https://github.com/spyder-ide/spyder-terminal
