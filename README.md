@@ -1,19 +1,21 @@
-About spyder-terminal
-=====================
-
-Home: https://github.com/spyder-ide/spyder-terminal
-
-Package license: MIT
+About spyder-terminal-feedstock
+===============================
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/spyder-terminal-feedstock/blob/main/LICENSE.txt)
+
+Home: https://www.spyder-ide.org
+
+Package license: MIT
 
 Summary: Spyder plugin for displaying system terminals.
 
 Development: https://github.com/spyder-ide/spyder-terminal
 
-This plugin allows you to execute flawlessly any bash command
+Documentation: https://github.com/spyder-ide/spyder-terminal/blob/master/README.rst
+
+This plugin allows you to execute flawlessly any Bash command
 inside Spyder, even ncurses applications like nano or vi, or
-Windows console applications such as powershell.
+Windows console applications such as PowerShell.
 
 
 Current build status
@@ -102,7 +104,7 @@ available continuous integration services. Thanks to the awesome service provide
 [CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
 [Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
 it is possible to build and upload installable packages to the
-[conda-forge](https://anaconda.org/conda-forge) [Anaconda-Cloud](https://anaconda.org/)
+[conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
 channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance
@@ -150,6 +152,7 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@CAM-Gerlach](https://github.com/CAM-Gerlach/)
 * [@andfoy](https://github.com/andfoy/)
 * [@ccordoba12](https://github.com/ccordoba12/)
 * [@steff456](https://github.com/steff456/)

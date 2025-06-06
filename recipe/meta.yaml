@@ -1,56 +1,58 @@
 {% set name = "spyder-terminal" %}
+{% set import = "spyder_terminal" %}
 {% set version = "1.2.2" %}
-{% set hash = "34235070276a0cb255a5c371cbef076a355059a8a8c71fa9805df229ea0335da" %}
+{% set sha256 = "34235070276a0cb255a5c371cbef076a355059a8a8c71fa9805df229ea0335da" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ hash }}
+  url: https://pypi.org/packages/source/{{ name[0]|lower }}/{{ name|lower }}/{{ name }}-{{ version }}.tar.gz
+  sha256: {{ sha256 }}
 
 build:
-  number: 1
   noarch: python
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  number: 2
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pip
     - setuptools
 
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - spyder >=5.2.0
     - tornado
-    - terminado
+    - terminado >=0.13.1
     - coloredlogs
     - requests
 
 test:
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
   # Importing spyder_terminal requires many CDTs to be installed on linux
   # This would needlessly increase build time
   # imports:
-  #   - spyder_terminal
+  #   - {{ import }}
 
 about:
-  home: https://github.com/spyder-ide/spyder-terminal
+  home: https://www.spyder-ide.org
   license: MIT
   license_family: MIT
   license_file: LICENSE.txt
   summary: Spyder plugin for displaying system terminals.
   description: |
-    This plugin allows you to execute flawlessly any bash command
+    This plugin allows you to execute flawlessly any Bash command
     inside Spyder, even ncurses applications like nano or vi, or
-    Windows console applications such as powershell.
+    Windows console applications such as PowerShell.
   dev_url: https://github.com/spyder-ide/spyder-terminal
+  doc_url: https://github.com/spyder-ide/spyder-terminal/blob/master/README.rst
 
 extra:
   recipe-maintainers:
