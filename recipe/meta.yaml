@@ -24,7 +24,7 @@ requirements:
 
   run:
     - python >={{ python_min }}
-    - spyder >=5.2.0
+    - spyder >=6.1.0
     - tornado
     - terminado >=0.13.1
     - coloredlogs
