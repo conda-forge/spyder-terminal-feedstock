@@ -153,7 +153,6 @@ Feedstock Maintainers
 =====================
 
 * [@CAM-Gerlach](https://github.com/CAM-Gerlach/)
-* [@andfoy](https://github.com/andfoy/)
 * [@ccordoba12](https://github.com/ccordoba12/)
-* [@steff456](https://github.com/steff456/)
+* [@dalthviz](https://github.com/dalthviz/)
 
