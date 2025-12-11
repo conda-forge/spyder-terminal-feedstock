@@ -1,19 +1,19 @@
 {% set name = "spyder-terminal" %}
 {% set import = "spyder_terminal" %}
-{% set version = "1.2.2" %}
-{% set sha256 = "34235070276a0cb255a5c371cbef076a355059a8a8c71fa9805df229ea0335da" %}
+{% set version = "1.3.0" %}
+{% set sha256 = "70de0f0c40ae66f6330f517f5ff770811459f11d048e1b9719801bc86fad20eb" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0]|lower }}/{{ name|lower }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0]|lower }}/{{ name|lower }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
   noarch: python
-  number: 2
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -24,7 +24,7 @@ requirements:
 
   run:
     - python >={{ python_min }}
-    - spyder >=5.2.0
+    - spyder >=6.1.0,<7.0.0
     - tornado
     - terminado >=0.13.1
     - coloredlogs
